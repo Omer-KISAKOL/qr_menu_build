@@ -1,6 +1,9 @@
 import React from 'react';
+import PrivateRoute from "components/PrivateRoute";
 import Home from "./pages/home";
-import Login from "./pages/login";
+import Login from "./pages/auth/login";
+import AuthLayout from "./pages/auth";
+import Register from "./pages/auth/register";
 
 const routes = [
     {
@@ -8,9 +11,29 @@ const routes = [
         element: <Home/>
     },
     {
-        path: '/login',
-        element: <Login/>
+        path: '/auth',
+        element: <AuthLayout />,
+        children: [
+            {
+                path: 'login',
+                element: <Login />
+            },
+            {
+                path: 'register',
+                element: <Register />
+            }
+        ]
     }
 ]
 
-export default routes
+const authCheck = routes => routes.map(route => {
+    if (route?.auth) {
+        route.element = <PrivateRoute>{route.element}</PrivateRoute>
+    }
+    if (route?.children) {
+        route.children = authCheck(route.children)
+    }
+    return route
+})
+
+export default authCheck(routes)
