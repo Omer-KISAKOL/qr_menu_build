@@ -5,6 +5,7 @@ import { Disclosure } from '@headlessui/react'
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
+import { CiCircleCheck } from "react-icons/ci";
 import 'index.css'
 
 
@@ -293,7 +294,7 @@ export default function Home() {
                                 <div className="tabs-content" id="myTabContent">
                                     <div className="tab active" data-tab-id="1">
 
-                                            <OwlCarousel className='owl-theme' loop margin={10} nav={true} dots={false} items={1} autoplay={true} autoplayTimeout={1700}>
+                                            <OwlCarousel className='owl-theme' loop margin={10} nav={true} dots={false} items={1} autoplay={true} autoplayTimeout={2800}>
 
                                                 <li className="splide__slide" id="login-splide-slide01" role="group"
                                                     aria-roledescription="slide" aria-label="1 of 4" aria-hidden="true">
@@ -388,25 +389,36 @@ export default function Home() {
 
                         <div className="">
 
-                            <div className="section-headline centered mt-0 mb-36">
+                            <div className="section-headline centered mt-0 mb-20">
                                 <h3>Üyelik Planı</h3>
                             </div>
                         </div>
 
 
                         <div className="mt-0">
-                            <form name="form1" method="post" action="https://menum.co/membership/changeplan">
-                                <div className="billing-cycle-radios mb-32">
+                            <form name="form1" method="post" action="replace">
+                                <div className="billing-cycle-radios  pb-24">
+
                                     <div className="radio billed-yearly-radio">
                                         <input id="radio-yearly" name="billed-type" type="radio" value="yearly"/>
-                                        <label htmlFor="radio-yearly"><span
-                                            className="radio-label"></span> Yıllık</label>
+                                        <label htmlFor="radio-yearly">
+                                            <span className="radio-label"></span>
+                                            Yıllık
+                                        </label>
                                     </div>
+
+                                    <div className="radio billed-yearly-radio">
+                                        <input id="radio-monthly" name="billed-type" type="radio" value="monthly"/>
+                                        <label htmlFor="radio-yearly">
+                                            <span className="radio-label"></span>
+                                            Aylık
+                                        </label>
+                                    </div>
+
                                 </div>
 
 
                                 <div className="grid pricing-plans-container billed-yearly  grid-cols-1 lg:grid-cols-3 gap-4 justify-center">
-
 
                                     <div className="pricing-plan ">
                                         <h3>Ücretsiz</h3>
@@ -448,10 +460,10 @@ export default function Home() {
                                                 <li>✅ Ürün Fotoğrafı</li>
                                                 <li>✅ Komisyon Yok</li>
 
-
-                                                <li>
-                                                        <span className="icon-text yes"><i
-                                                            className="icon-feather-check-circle margin-right-2"></i></span>
+                                                <li className="flex justify-between">
+                                                        <span className="icon-text yes mt-2 mr-2">
+                                                        <CiCircleCheck/>
+                                                    </span>
                                                     Restoranların siparişleri kabul etmesine izin ver
                                                 </li>
 
@@ -459,7 +471,7 @@ export default function Home() {
                                         </div>
 
                                         <a href="https://menum.co/signup"
-                                           className="button full-width margin-top-20 ripple-effect">
+                                           className="button full-width mt-6">
                                             Mevcut Plan
                                         </a>
                                     </div>
@@ -505,10 +517,10 @@ export default function Home() {
                                                 <li>✅ Ürün Fotoğrafı</li>
                                                 <li>✅ Komisyon Yok</li>
 
-
-                                                <li>
-                                                        <span className="icon-text yes"><i
-                                                            className="icon-feather-check-circle margin-right-2"></i></span>
+                                                <li className="flex justify-between">
+                                                        <span className="icon-text yes mt-1 mr-2">
+                                                            <CiCircleCheck/>
+                                                        </span>
                                                     Restoranların siparişleri kabul etmesine izin ver
                                                 </li>
 
@@ -516,7 +528,7 @@ export default function Home() {
                                         </div>
 
                                         <a href="https://menum.co/login"
-                                           className="button full-width margin-top-20 ripple-effect">Giriş Yap</a>
+                                           className="button full-width mt-6">Giriş Yap</a>
                                     </div>
 
 
@@ -562,10 +574,10 @@ export default function Home() {
                                                     <li>✅ Ürün Fotoğrafı</li>
                                                     <li>✅ Komisyon Yok</li>
 
-
-                                                    <li>
-                                                        <span className="icon-text yes"><i
-                                                            className="icon-feather-check-circle margin-right-2"></i></span>
+                                                    <li className="flex justify-between">
+                                                        <span className="icon-text yes mt-2 mr-2">
+                                                            <CiCircleCheck />
+                                                        </span>
                                                         Restoranların siparişleri kabul etmesine izin ver
                                                     </li>
 
@@ -573,7 +585,7 @@ export default function Home() {
                                             </div>
 
                                             <a href="https://menum.co/login"
-                                               className="button full-width margin-top-20 ripple-effect">Giriş Yap</a>
+                                               className="button full-width btn3">Giriş Yap</a>
                                         </div>
 
                                     </div>

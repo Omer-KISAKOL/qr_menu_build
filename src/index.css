@@ -27,6 +27,9 @@
     padding: 35px 17px;
     position: relative;
 }
+.pricing-plan:first-of-type {
+    padding-left: 35px;
+}
 .pricing-plan.recommended {
     box-shadow: 0 0 45px rgba(0, 0, 0, .09);
     padding: 35px;
@@ -60,7 +63,83 @@
     color: #333;
 }
 .billing-cycle-radios {
-    display: block;
+    display: flex;
+    justify-content: space-evenly;
     margin: 0 auto;
     text-align: center;
+}
+.pricing-plan h3 {
+    font-size: 20px;
+    font-weight: 600;
+}
+.pricing-plan-label {
+    background: #f6f6f6;
+    border-radius: 4px;
+    font-size: 18px;
+    color: #888;
+    text-align: center;
+    line-height: 24px;
+    padding: 15px;
+    margin: 22px 0;
+}
+.pricing-plan-label strong {
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+    margin-right: 5px;
+    line-height: 30px;
+}
+.pricing-plan-features strong {
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 5px;
+    line-height: 24px;
+    display: inline-block;
+}
+.pricing-plan-features ul li {
+    display: flex;
+    margin: 0;
+    padding: 3px 0;
+    line-height: 24px;
+}
+.button.full-width {
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+    display: block;
+    padding: 10px 20px;
+    color: rgba(255, 110, 1, 1);
+    border: 1px solid rgba(255, 110, 1, 1);
+    box-shadow: 0 4px 12px rgba(255, 110, 1, 0.1);
+}
+.button.full-width:hover {
+    background-color: rgba(255, 110, 1, 1);
+    color: white;
+}
+.btn3{
+    background-color: rgba(255, 110, 1, 1);
+    color: white!important;
+    margin-top: 15px;
+}
+.yes{
+   color:#2db414;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1024px){
+    .recommended-badge{
+        margin-top: 24px;
+    }
 }
