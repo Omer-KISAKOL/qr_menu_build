@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/*HEADER*/
+.hero-section {
+    background-image: url(assets/bg-qr.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    position: relative;
+    border-top: 1px solid #eaeaea;
+    z-index: 1;
+}
+.hero-content {
+    display: grid;
+    padding: 50px 0 25px;
+    line-height: 1.5;
+    justify-items: center;
+}
+
+/*PLANS*/
+.pricing-plan {
+    padding: 35px 17px;
+    position: relative;
+}
+.pricing-plan.recommended {
+    box-shadow: 0 0 45px rgba(0, 0, 0, .09);
+    padding: 35px;
+    margin-left: 15px;
+}
+.pricing-plans-container {
+    border-radius: 4px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, .1);
+}
+.pricing-plan .recommended-badge {
+    background-color: rgba(255, 110, 1, 1);
+    color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 45px;
+    top: -45px;
+    left: 0;
+    text-align: center;
+    border-radius: 4px 4px 0 0;
+    font-weight: 600;
+    line-height: 45px;
+}
+.section-headline.centered {
+    text-align: center;
+    padding: 0;
+}
+.section-headline h1, .section-headline h2, .section-headline h3, .section-headline h4 {
+    font-size: 26px;
+    line-height: 36px;
+    font-weight: 500;
+    color: #333;
+}
+.billing-cycle-radios {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}

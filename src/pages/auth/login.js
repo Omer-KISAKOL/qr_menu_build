@@ -6,9 +6,8 @@ import Separator from "components/Separator";
 import { MdMenuBook } from "react-icons/md";
 import { Link} from "react-router-dom"
 import {Formik, Form} from "formik";
-import {LoginSchema} from "validation";
 import {Helmet} from "react-helmet";
-import 'style.css';
+import 'index.css';
 
 export default function Login() {
 
@@ -16,7 +15,7 @@ export default function Login() {
 
 
     return (
-        <div className="h-full w-full flex flex-wrap overflow-auto items-center gap-x-8 justify-center">
+        <div className="">
 
             <Helmet>
                 <title>Login • QR MENU</title>
@@ -24,17 +23,16 @@ export default function Login() {
 
 
 
-            <div className="w-[350px] grid gap-y-3">
+            <div className="w-[350px]">
 
-                <div className="bg-white border px-[40px] pt-10 pb-6">
+                <div className="bg-white border px-[10px] pt-10 pb-6">
 
                     <Formik
-                        validationSchema={LoginSchema}
                         initialValues={{
                             username: '',
                             password: ''
                         }}
-                         //onSubmit={handleSubmit}
+                        //onSubmit={handleSubmit}
                     >
                         {({isSubmitting, isValid, dirty}) => (
                             <Form className="grid gap-y-1.5">
@@ -43,9 +41,10 @@ export default function Login() {
                                 <Button type="submit" disabled={!isValid || !dirty || isSubmitting}>
                                     Log In
                                 </Button>
-                                <Separator />
-                                <a href="replace" className="flex justify-center mb-3 items-center gap-x-2 text-sm font-semibold text-facebook">
-                                    <MdMenuBook  size={20}/>
+                                <Separator/>
+                                <a href="replace"
+                                   className="flex justify-center mb-3 items-center gap-x-2 text-sm font-semibold text-facebook">
+                                    <MdMenuBook size={20}/>
                                     Log in with Facebook
                                 </a>
                                 <a href="replace" className="text-xs flex items-center justify-center text-link">
@@ -61,6 +60,7 @@ export default function Login() {
                 </div>
 
             </div>
+
 
         </div>
     );
