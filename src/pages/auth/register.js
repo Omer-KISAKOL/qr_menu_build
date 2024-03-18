@@ -5,8 +5,10 @@ import Separator from "components/Separator";
 import { MdMenuBook } from "react-icons/md";
 import {useNavigate, useLocation, Link} from "react-router-dom"
 import {Formik, Form} from "formik";
-import {RegisterSchema} from "validation";
+// import {RegisterSchema} from "validation";
 import {Helmet} from "react-helmet";
+import 'index.css';
+
 
 export default function Register() {
 
@@ -43,7 +45,6 @@ export default function Register() {
                 </Button>
                 <Separator/>
                 <Formik
-                    validationSchema={RegisterSchema}
                     initialValues={{
                         email: '',
                         full_name: '',
